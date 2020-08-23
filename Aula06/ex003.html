@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso javascript</title>
+    <style>
+        body {
+            background-color: chocolate;
+            font: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Olá mundo</h1>
+    <p id='resultado'></p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, ducimus! Corrupti animi quae odit inventore repellendus at doloribus, provident quis, dignissimos, a ratione rerum ab mollitia? Ex reprehenderit repellat voluptas?</p>
+    <script>
+        var n1 = parseFloat(window.prompt('Digite um número'))
+        var n2 = parseFloat(window.prompt('Digite outro número'))
+        
+        var resultado = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é ${resultado}`)
+        document.getElementById("resultado").textContent = resultado
+    </script>
+</body>
+</html>
