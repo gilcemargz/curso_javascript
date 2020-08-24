@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(102, 241, 102);
+        }
+    </style>
 </head>
 <body>
+    <h1>Isso é um título</h1>
+    <p>Esse é um parágrafo.</p>
+    <p>Isso é outro parágrafo</p>
+    <article id='teste'>Artigo legal</article>
+    <div name='ula'>Uma div</div>
     <script>
         var nome = window.prompt('Qual o seu nome?')
         document.write(`Seu nome tem ${nome.length} letras </br>`)
@@ -15,6 +25,18 @@
         for (let index = 0; index < 10; index++) {
             document.write(`<strong>${index}</strong></br>`)
         }
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write(p1.innerText)
+        corpo.style.color = 'red'
+        p1.style.color = 'blue'
+        var art1 = document.getElementById('teste')
+        art1.style.color = 'yellow'
+        art1.style.background = 'red'
+        var divv = document.getElementsByName('ula')[0]
+        divv.style.background = 'white'
+        var novo = document.querySelector('article#teste')
+        novo.style.color = 'blue'
 
     </script>
 </body>
