@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            color: rgba(255, 255, 255, 0.685);
+            background-color: rgba(252, 5, 5, 0.705);
+            font-family: fantasy;
+            font-size: xx-large;
+            block-size: 100px;
+            align-self: center;
+            align-items: initial;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Area div
+    </div>
+    <script>
+        var a = document.getElementById('area')
+        a.addEventListener("click", clicar)
+        a.addEventListener("mouseenter", entrou)
+        function clicar(){
+            a.innerText = "Mudou"
+        }
+        function entrou(){
+            var t = document.querySelector("div#area")
+            t.style.color = 'red'
+            
+        }
+
+    </script>
+</body>
+</html>
