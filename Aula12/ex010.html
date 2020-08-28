@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: brown;
+        }
+        h1{
+            color: white;
+            text-align: center;
+        }
+        div#area{
+            border: cornsilk;
+            border-style: solid;
+            border-width: 1px;
+            width: 500px;
+            height: 500px;
+            background-color: cornsilk;
+            text-align: center;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hora do dia</h1>
+    <div id="area">
+        <h2 id="hora">Agora são </h2> 
+        <img id="foto" src="" alt="Manhâ" width="240px">
+        <img id= "sec" src="" width="200px">
+
+    </div>
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        document.querySelector("h2#hora").textContent = `Agora são ${hora} horas`
+
+        if (hora<12) {
+            document.body.style.background = 'rgb(255,200,150)'
+            document.querySelector("img#foto").src = "manha.jpg"
+        } else if (hora<18) {
+            document.body.style.background = 'rgb(200,150,100)'
+            document.querySelector("img#foto").src = "tarde.jpg"
+        } else {
+            document.body.style.background = 'rgb(50,50,50)'
+            document.querySelector("img#foto").src = "noite.jpg"
+            document.querySelector("img#sec").src = "manha.jpg"
+        }
+
+    </script>
+</body>
+</html>

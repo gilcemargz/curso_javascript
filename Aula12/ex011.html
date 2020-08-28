@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Verificador de idade</h1>
+    Digite a idade:
+    <input id="ano"  type="number" name="txtano">
+    <h3>Sexo</h6>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Masculino</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Feminino</label>
+    <input type="button" value="Validar" onclick="vai()">
+    <script>
+        function vai() {
+            var ano = Number(document.querySelector("input#ano").value)
+            var idade = 2020 - ano
+
+            if (idade<1) {
+                alert("Ano inválido")
+                return
+            }
+            
+            var sexo = document.getElementsByName("gender")
+            var labels = document.getElementsByTagName("label")
+        
+            for (let index = 0; index < labels.length; index++) {
+                const element = labels[index];
+                //alert(element.textContent)
+            }
+            
+            var cc = 0
+
+            sexo.forEach(element => {
+                if (element.checked) {
+                    alert(`Você é ${labels[cc].textContent} com ${idade} anos`)
+                }
+                cc++
+            });
+        }
+    </script>
+    
+</body>
+</html>
