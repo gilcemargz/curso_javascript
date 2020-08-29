@@ -1,0 +1,21 @@
+body{
+    background-color: blue;
+}
+h1.cabeca{
+    color: white;
+    text-align: center;
+}
+footer{
+    color: white;
+    text-align: center;
+    font-size: medium;
+    padding: 100px;
+}
+select{
+    align-self: center;
+    background-color:seagreen;
+    padding-bottom: 120px;    
+}
+input[type=button]{
+    margin: 20px;
+}
