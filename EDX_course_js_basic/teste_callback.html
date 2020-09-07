@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="botao" type="button" value="Clique ai">
+    <div id='div'>Teste</div>
+    <script>
+        
+        document.querySelector("#botao").addEventListener("click", cliqueBotao )
+        var nn = 0
+
+        function cliqueBotao(){
+            console.log('oi')
+
+            document.querySelector("#div").textContent = nn
+            nn++
+            //document.body.innerHTML += "</br>Clicou no botao"+nn
+            
+            
+        }
+
+
+/*        
+        addEventListener("click", clicou)
+        function clicou(){
+            alert('oi')
+        }
+        addEventListener("mouseover", function(){
+            alert('mouse')
+        })
+        window.onclick = function(){
+            alert('Clicou na janela')
+        } */
+    </script>
+</body>
+</html>
