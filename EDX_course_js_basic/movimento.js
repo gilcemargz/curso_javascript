@@ -7,6 +7,13 @@ var yMonster = 10;
 var speedMonster = 1;
 var velocidade = 5;
 const modificaVelo = 0.1;
+var boneco = {
+    x: 10,
+    y: 10,
+    w: 25,
+    h: 25,
+    cor: 'blue'
+}
 
 function soma(n1, n2, sinal){
 
@@ -43,8 +50,14 @@ window.onload = function init(){
     h = canvas.height;
     
     ctx = canvas.getContext('2d');
+    canvas.addEventListener('mousemove', escrever);
 
     mainLoop();
+}
+
+function escrever(/**@type {MouseEvent} */ evt){
+    boneco.x = evt.clientX - canvas.getBoundingClientRect().left - (boneco.w / 2);
+    boneco.y = evt.clientY - canvas.getBoundingClientRect().top - (boneco.h / 2);  
 }
 
 function mainLoop()
@@ -64,6 +77,9 @@ function mainLoop()
     if (xMonster >= w || xMonster <= 0) {
         speedMonster = -speedMonster;
     }
+
+    ctx.fillStyle = boneco.cor;
+    ctx.fillRect(boneco.x, boneco.y, boneco.w, boneco.h);
 
     requestAnimationFrame(mainLoop)
 }
