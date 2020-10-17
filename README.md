@@ -1,5 +1,5 @@
-# Estudos em JavaScript
-Alguns testes para aprender a linguagem.
+# JavaScript
+Some works in JS
 
 * Portuguese
   * [Jogo da velha](https://gilcemargz.github.io/curso_javascript//EDX_course_js_basic/module_01.html)
