@@ -8,6 +8,9 @@ function marca(idClicado) {
     let linha
     let coluna = idClicado.substring(1,2) - 1 
 
+    quadro.width = "180"
+    quadro.height = "100"
+
     switch (idClicado.substring(0,1)) {
         case 'a':
             linha = 0                          

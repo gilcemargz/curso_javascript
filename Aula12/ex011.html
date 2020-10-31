@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Verificador de idade</h1>
-    Digite a idade:
+    Digite o ano de nascimento:
     <input id="ano"  type="number" name="txtano">
     <h3>Sexo</h6>
     <input type="radio" id="male" name="gender" value="male">
@@ -18,7 +18,8 @@
     <script>
         function vai() {
             var ano = Number(document.querySelector("input#ano").value)
-            var idade = 2020 - ano
+            var anoAtual = new Date().getFullYear()
+            var idade = anoAtual - ano
 
             if (idade<1) {
                 alert("Ano inválido")

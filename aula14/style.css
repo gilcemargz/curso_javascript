@@ -1,19 +1,19 @@
 body{
-    background-color: blue;
+    background-color: rgb(227, 226, 236);
 }
 h1.cabeca{
-    color: white;
+    color: black;
     text-align: center;
 }
 footer{
-    color: white;
+    color: black;
     text-align: center;
     font-size: medium;
     padding: 100px;
 }
 select{
     align-self: center;
-    background-color:seagreen;
+    background-color:rgb(169, 199, 182);
     padding-bottom: 120px;    
 }
 input[type=button]{

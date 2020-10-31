@@ -17,7 +17,7 @@ function girar(){
 
         nextPos = posicao - 1
         
-                                    fo
+                                    
 
         if(nextPos < 0 ){
             nextPos = posicoes.length - 1
